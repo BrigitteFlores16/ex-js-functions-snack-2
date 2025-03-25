@@ -3,7 +3,10 @@
 //Scrivi una funzione creaTimer che accetta un tempo (in ms) e restituisce una nuova funzione che avvia un setTimeout per stampare "Tempo scaduto!".
 
 function creaTimer(tempo) {
-  return () => setTimeout(() => console.log("tempo scaduto!"), tempo);
+  return () =>
+    setTimeout(() => {
+      console.log("tempo scaduto!");
+    }, tempo);
 }
-let functiontimer = creaTimer(5000);
-functiontimer();
+const timer = creaTimer(2000);
+timer();

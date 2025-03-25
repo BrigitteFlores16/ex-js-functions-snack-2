@@ -4,11 +4,8 @@
 //Nota: Questa funzione creerà un loop infinito. Interrompilo manualmente o usa clearInterval() in un altro script.
 
 function stampaOgniSecondo(messaggio) {
-  let intervalId = setInterval(() => console.log(messaggio), 1000);
-  return intervalId;
+  setInterval(() => {
+    console.log(messaggio);
+  }, 1000);
 }
-let id = stampaOgniSecondo("hello, stampata ogni secondo!");
-setTimeout(() => {
-  clearInterval(id);
-  console.log(" è stato interrotto.");
-}, 5000);
+stampaOgniSecondo("Hello");
